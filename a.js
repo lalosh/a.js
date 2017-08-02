@@ -21,7 +21,8 @@ let a = (function a(){
             let innerElement = outerElement.querySelector(selectorString);
             return {
                 text: text(innerElement),
-                element: (function returnElement(){return innerElement;})()
+                element: (function returnElement(){return innerElement;})(),
+                attr : attr(innerElement),
             }
         }
 
@@ -50,22 +51,40 @@ let a = (function a(){
 
         return{
             element: element,
-            html: html
+            html: html,
         }
     }
 
-    function attribute(element){
+    function attr(element){
 
-        return function name(){
-
-            return function value(){
-
+        function set(name){
+            return function(value){
+                element.setAttribute(name, value);
             }
+        }
+
+        function get(name){
+            return element.getAttribute(name);
+        }
+
+        function remove(name){
+            element.removeAttribute(name);
+        }
+
+        function hasA(name){
+            return element.hasAttribute(name);
+        }
+        return {
+            set: set,
+            get: get,
+            remove: remove,
+            hasA: hasA,
         }
     }
     return{
         select: select,
         create: create(),
         text: text,
+        attr: attr,
     }
 })();
