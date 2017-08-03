@@ -73,12 +73,14 @@ create h1 element with the inner text "super header" after/before the
 element with the id "# some_id"
 
 >a.create.element('h1').innerText('super header').after('# some_id')
+
 >a.create.element('h1').innerText('super header').before('# some_id')
 
 create a div elements contains the provided tags after/before the 
 div elements with a class called "cool_class" 
 
 >a.create.html('<h2><p>amazing paragraph here</p></h2>').after('div.cool_class')
+
 >a.create.html('<h2><p>amazing paragraph here</p></h2>').before('div.cool_class')
 
 
