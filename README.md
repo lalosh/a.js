@@ -1,10 +1,4 @@
-<!DOCTYPE html>
 
-<html>
-<head>
-    <title></title>
-</head>
-<body>
     <h1>Relent the DOM by taking advantages of JS!</h1> 
 
     
@@ -124,5 +118,3 @@
         
     </div>
     
-</body>
-</html>
