@@ -1,28 +1,28 @@
-### Relent the DOM by taking advantages of JS!
+# Relent the DOM by taking advantages of JS!
 
 
-# First
+## First
     
-    <script src="a.js"></script>
+> <script src="a.js"></script>
 
     once you include the script 'a.js' in your page a variable called 'a' is used to
     reference every function related to this library
 
 
-## Examples
+# Examples
 
-# Get the text contents:
+## Get the text contents:
 
     
     //use a CSS selector
-    text('# my_span');
+>text('# my_span');
 
     //use an element
-    let element = (document.querySelector('# my_span'));
-    text(element); 
+>let element = (document.querySelector('# my_span'));
+>text(element); 
         
 
-# Select an Element:
+## Select an Element:
 
     
     //return the inner text
@@ -44,7 +44,7 @@
     a.select('# some_id').inside('div# another_Id').attr.hasA('id')
 
        
-    # NOTICE
+## NOTICE
 
     //providing and empty parameter to the function inside will
     //select an element inside of the 'body' element of your document
@@ -52,7 +52,7 @@
     
     
 
-# HTML Attributes:
+## HTML Attributes:
 
     
     let element = document.querySelector(div# some_id);
@@ -70,7 +70,7 @@
     attr(element).hasA('id');
     
 
-# Create Elements:
+## Create Elements:
 
     
     //create h1 element with the inner text "super header" after/before the
@@ -84,6 +84,6 @@
     a.create.html('<h2><p>amazing paragraph here</p></h2>').before('div.cool_class')
     
 
-    # NOTICE    
+## NOTICE    
     empty param to after() and before() will result in inserting the 
     element after the last element or before the first element respectively
