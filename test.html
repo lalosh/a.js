@@ -23,8 +23,8 @@
 
         console.log(a.select('h1').inside().element);
         console.log(a.select('li#conn').inside('ul#con').text);
-        a.create.html('<h2>new new header<p>and i am a pragraph</p></h2>');
-        a.create.element('h3');
+        a.create.html('<h2>new new header<p>and i am a pragraph</p></h2>').after('body');
+        a.create.element('h3').innerText('الحمد لله رب العالمين').after('#conn');
         console.log(a.text('h1'));
 
         a.select('li#conn').inside('ul#con').attr.set('id')('blag');

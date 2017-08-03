@@ -31,22 +31,49 @@ let a = (function a(){
         };
     }
 
+
+
     function create(){
+
+        let wantedElement;
 
         function element(elementTagName){
             let element = document.createElement(elementTagName.toLowerCase());
-            document.body.appendChild(element);
-            return element;
+             wantedElement = element;
+             return {innerText: innerText};
+
         }
-        
+
+        function innerText(someText){
+            let textNode = document.createTextNode(someText);
+            wantedElement.appendChild(textNode);
+
+            return {
+                before: before,
+                after: after
+            };
+        }
         function html(HTMLString){
             let docFrag = document.createDocumentFragment();
             let element = document.createElement('div');
             
             docFrag.appendChild(element);
             docFrag.querySelector('div').innerHTML = HTMLString;
+            wantedElement = docFrag.querySelector('div');
+            return {
+                before: before,
+                after: after
+            };
+        }
 
-            document.body.appendChild(docFrag);
+        function before(selectorString){
+            let query = document.querySelector(selectorString);
+            query.insertAdjacentHTML('beforebegin', wantedElement.outerHTML);
+        }
+
+        function after(selectorString){
+            let query = document.querySelector(selectorString);
+            query.insertAdjacentHTML('afterend', wantedElement.outerHTML);
         }
 
         return{
