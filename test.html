@@ -23,13 +23,18 @@
 
         console.log(a.select('h1').inside().element);
         console.log(a.select('li#conn').inside('ul#con').text);
-        a.create.html('<h2>new new header<p>and i am a pragraph</p></h2>').after('body');
-        a.create.element('h3').innerText('الحمد لله رب العالمين').after('#conn');
-        console.log(a.text('h1'));
+        a.create.html('<div><h2>new new header</h2><p>and i am a pragraph</p></div>').after();
+        a.create.element('h3').innerText('الحمد لله رب العالمين').before();
+        console.log("--------",a.text('h1'));
 
         a.select('li#conn').inside('ul#con').attr.set('id')('blag');
         let vv =a.select('li#blag').inside('ul#con').attr.hasA('id');
         console.log(vv);
-    </script>
+
+        let aa = a.attr(document.querySelector('#con')).hasA('id');
+        console.log(aa);
+
+</script>
 </body>
 </html>
+
