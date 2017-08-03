@@ -3,7 +3,7 @@
 
 ## First
 
-> <script src=">a.js"></script>
+> <script src="a.js"></script>
 
 once you include the script '>a.js' in your page a variable called 'a' is used to
 reference every function related to this library
