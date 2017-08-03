@@ -79,9 +79,9 @@ element with the id "# some_id"
 create a div elements contains the provided tags after/before the 
 div elements with a class called "cool_class" 
 
->a.create.html('<h2><p>amazing paragraph here</p></h2>').after('div.cool_class')
+>a.create.html('&lt;h2&gt;&lt;p&gt;amazing paragraph here&lt;/p&gt;&lt;/h2&gt;').after('div.cool_class')
 
->a.create.html('<h2><p>amazing paragraph here</p></h2>').before('div.cool_class')
+>a.create.html('&lt;h2&gt;&lt;p&gt;amazing paragraph here&lt;/p&gt;&lt;/h2&gt;').before('div.cool_class')
 
 
 ## NOTICE    
