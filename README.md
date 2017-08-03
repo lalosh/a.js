@@ -1,7 +1,7 @@
-###Relent the DOM by taking advantages of JS!
+### Relent the DOM by taking advantages of JS!
 
 
-#First
+# First
     
     <script src="a.js"></script>
 
@@ -9,53 +9,53 @@
     reference every function related to this library
 
 
-##Examples
+## Examples
 
-#Get the text contents:
+# Get the text contents:
 
     
     //use a CSS selector
-    text('#my_span');
+    text('# my_span');
 
     //use an element
-    let element = (document.querySelector('#my_span'));
+    let element = (document.querySelector('# my_span'));
     text(element); 
         
 
-#Select an Element:
+# Select an Element:
 
     
     //return the inner text
-    a.select('#some_id').inside('div#another_Id').text
+    a.select('# some_id').inside('div# another_Id').text
 
     //return the element itself as an html node
-    a.select('#some_id').inside('div#another_Id').element    
+    a.select('# some_id').inside('div# another_Id').element    
 
     //set an attribute
-    a.select('#some_id').inside('div#another_Id').attr.set('color')('white')
+    a.select('# some_id').inside('div# another_Id').attr.set('color')('white')
 
     //get some attribute
-    a.select('#some_id').inside('div#another_Id').attr.get('class')    
+    a.select('# some_id').inside('div# another_Id').attr.get('class')    
 
     //remove an attribute
-    a.select('#some_id').inside('div#another_Id').attr.remove('id')
+    a.select('# some_id').inside('div# another_Id').attr.remove('id')
 
     //check if it has an attribute
-    a.select('#some_id').inside('div#another_Id').attr.hasA('id')
+    a.select('# some_id').inside('div# another_Id').attr.hasA('id')
 
        
-    #NOTICE
+    # NOTICE
 
     //providing and empty parameter to the function inside will
     //select an element inside of the 'body' element of your document
-    a.select('#some_id').inside().....etc
+    a.select('# some_id').inside().....etc
     
     
 
-#HTML Attributes:
+# HTML Attributes:
 
     
-    let element = document.querySelector(div#some_id);
+    let element = document.querySelector(div# some_id);
 
     //set an attribute for element
     attr(element).set('color')('white');
@@ -70,13 +70,13 @@
     attr(element).hasA('id');
     
 
-#Create Elements:
+# Create Elements:
 
     
     //create h1 element with the inner text "super header" after/before the
-    //element with the id "#some_id"
-    a.create.element('h1').innerText('super header').after('#some_id')
-    a.create.element('h1').innerText('super header').before('#some_id')
+    //element with the id "# some_id"
+    a.create.element('h1').innerText('super header').after('# some_id')
+    a.create.element('h1').innerText('super header').before('# some_id')
 
     //create a div elements contains the provided tags after/before the 
     //div elements with a class called "cool_class" 
@@ -84,6 +84,6 @@
     a.create.html('<h2><p>amazing paragraph here</p></h2>').before('div.cool_class')
     
 
-    #NOTICE    
+    # NOTICE    
     empty param to after() and before() will result in inserting the 
     element after the last element or before the first element respectively
